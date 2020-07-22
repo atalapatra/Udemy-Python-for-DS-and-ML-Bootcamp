@@ -11,3 +11,4 @@ USAhousing.info()
 
 USAhousing.describe()
 
+USAhousing.columns
