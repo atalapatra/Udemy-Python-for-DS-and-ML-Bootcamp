@@ -42,3 +42,14 @@ coeff_df = pd.DataFrame(lm.coef_,X.columns,columns=['Coefficient'])
 coeff_df
 
 predictions = lm.predict(X_test)
+predictions
+
+plt.scatter(y_test,predictions)
+
+sns.distplot((y_test-predictions),bins=50);
+
+from sklearn import metrics
+
+print('MAE:', metrics.mean_absolute_error(y_test, predictions))
+print('MSE:', metrics.mean_squared_error(y_test, predictions))
+print('RMSE:', np.sqrt(metrics.mean_squared_error(y_test, predictions)))
