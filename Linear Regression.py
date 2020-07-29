@@ -46,6 +46,7 @@ predictions
 
 plt.scatter(y_test,predictions)
 
+
 sns.distplot((y_test-predictions),bins=50);
 
 from sklearn import metrics
